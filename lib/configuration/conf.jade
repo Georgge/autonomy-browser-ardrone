@@ -1,0 +1,40 @@
+div(id="conf", class="conf")
+
+    div(id="close-conf", class="close-conf red")
+
+    div(id="open-conf", class="conf-button")
+        img(src="image/conf.png", alt="ver videos", width="45", height="45")
+
+    h2(class="map-panel-title")
+        | Configuracion del drone
+
+    div(class="general-conf")
+        div(class="conf-item") Max-Altitud
+            input(id="altitude-max", type="number", value="2")
+
+        div(class="conf-item") Modo emergencia
+            div(class="switch")
+                div(id="emergensy-disable", class="switch-on")
+
+
+        div(class="conf-item") Despegue estabilizado
+            div(class="switch bg-off")
+                div(id="takeoff-stablish", class="switch-off")
+
+        div(class="conf-item") Vuelo exterior
+            div(class="switch")
+                div(id="emergensy-disable", class="switch-on")
+
+        div(class="conf-item") Velocidad de subida
+            input(id="altitude-max", type="number", value="0.8")
+
+        div(class="conf-item") Velocidad de bajada
+            input(id="altitude-max", type="number", value="0.4")
+
+        div(class="conf-item") Velocidad lineal
+            input(id="altitude-max", type="number", value="0.3")
+
+        div(class="conf-item") Velocidad de rotacion
+            input(id="altitude-max", type="number", value="0.5")
+
+

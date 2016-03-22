@@ -1,0 +1,310 @@
+//Variables
+
+$letter-blueColor = #42A5F5
+$letter-whiteColor = #eee
+$letter-greenColor = #8df434
+$letter-greenColorHover = #6ab927
+$element-darkColor = #232323
+
+@import 'nib'
+@import 'switch'
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+body, html, h1, h2, h3, span, figure, ul, li
+    margin 0
+
+
+body
+    font-size 16px
+    font-family 'Open Sans' Arial
+    overflow hidden
+    background url('../image/bg-main.jpg')
+    background-size cover
+    background-position center
+
+.alerts
+    height 200px
+    width 400px
+    position absolute
+    top 20vh
+    left -35vw
+    right 65vw
+    background #333333
+    border solid 5px red
+    border-radius 4px
+    box-shadow 2px 3px 10px #000
+    display flex
+    justify-content center
+    align-items center
+    color #fff
+    font-size 1rem
+    flex-wrap wrap
+    padding 5px
+    @media screen and (max-width: 600px)
+        display: none
+
+.controls-help
+    position absolute
+    width 150px
+    height 150px
+    border-radius 50%
+    background #f40000
+    left -80px
+    top -75px
+    display flex
+    justify-content center
+    align-items center
+    cursor pointer
+    box-shadow 1px 1px 15px #272727
+    > img
+        margin-left 60px
+        margin-top 60px
+        width 40px
+
+
+.button-alert
+    width 120px
+    height 20px
+    border solid 3px red
+    margin 10px 30px
+    display flex
+    justify-content center
+    align-items center
+
+    &:hover
+        font-weight bold
+        cursor pointer
+
+.container
+    width 100vw
+    height 100vh
+    display flex
+    justify-content center
+    flex-wrap wrap
+    //overflow hidden
+    &::after
+        content ""
+        background url('../image/grid.png')
+        opacity 0.85
+        top 0
+        left 0
+        bottom 0
+        right 0
+        position absolute
+        z-index -1
+
+
+
+.canvas-container
+    margin 30px
+    position relative
+    @media screen and (max-width: 600px)
+        display: none
+
+.options
+    width 23vw
+    height 460px
+    background #333333
+    margin 30px
+    border solid 2px #129bff
+    color $letter-whiteColor
+    display flex
+    justify-content center
+    flex-wrap wrap
+    font-size 0.8rem
+    box-shadow 1px 1px 15px #272727
+    @media screen and (max-width: 1024px)
+        display: none
+
+    @media screen and (max-width: 1290px)
+        width 15vw
+
+
+.battery
+    width 200px
+    text-align center
+    color #0aff00
+    font-size 1.5rem
+    position absolute
+    right 0
+    top 0
+
+.batteryOrange
+    width 200px
+    text-align center
+    color #fff500
+    font-size 1.5rem
+    position absolute
+    right 0
+    top 0
+
+.batteryRed
+    width 200px
+    text-align center
+    color red
+    font-size 1.5rem
+    position absolute
+    right 0
+    top 0
+
+
+.options-item
+    width 90%
+    height 15px
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    align-items center
+    margin-top 5px
+    border-bottom solid 1px #7e7e7e
+    > div
+        color $letter-blueColor
+
+
+
+
+.option-span
+    color #0f81d4
+
+.messages
+    width 40vw
+    height 30px
+    overflow-y scroll
+    background #e8e8e8
+    color #3f3f3f
+    border-radius 4px
+    padding-left 5px
+    display flex
+    align-items center
+    @media screen and (max-width: 600px)
+        display: none
+
+
+
+
+.canvas-video
+    width 840px
+    height 460px
+    background #333333
+    border solid 2px #129bff
+    box-shadow 1px 1px 15px #272727
+    @media screen and (max-width: 600px)
+        display: none
+
+.medium-button
+    width 60%
+    height 35px
+    background-image linear-gradient( to top, #333333, #7e7e7e)
+    border-radius 5px
+    border solid 1px $element-darkColor
+    box-shadow 1px 1px 10px #000
+    color $letter-greenColor
+    font-weight normal
+    text-align center
+    display flex
+    justify-content center
+    align-items center
+    cursor pointer
+    &:hover
+        background-image linear-gradient( to top, #525252, #333)
+        color $letter-greenColorHover
+
+.little-button
+    width 123px
+    height 35px
+    background-image linear-gradient( to top, #333333, #7e7e7e)
+    border-radius 5px
+    border solid 1px $element-darkColor
+    box-shadow 1px 1px 10px #000
+    color $letter-greenColor
+    font-weight normal
+    text-align center
+    display flex
+    justify-content center
+    align-items center
+    cursor pointer
+    &:hover
+        background-image linear-gradient( to top, #525252, #333)
+        color $letter-greenColorHover
+
+@import '../routes/route'
+
+@import '../videos/video'
+
+@import '../buttons/buttons'
+
+@import '../help/help'
+
+@import '../configuration/conf'
+
+//Telemetry
+
+.altitude
+    width 20px
+    height 400px
+    background red
+    position absolute
+    margin-top 20px
+    margin-left 25px
+    color #27ff00
+    &-item
+        width 20px
+        height 8px
+        background #a7ff00
+        font-size 0.6rem
+        > div
+            padding-left 5px
+            margin-left 20px
+        &:nth-child(2n+2)
+            background blue
+            >div
+                margin-left -20px
+    > span
+        background red
+        width 20px
+        position absolute
+        left 0
+        right 0
+        bottom -8px
+        z-index 90
+
+.altitude-number
+    width 45px
+    height 15px
+    margin-left -15px
+    margin-top 5px
+    text-align center
+    color #27ff00
+    font-size 0.6rem
+
+.drone-ubication
+    position absolute
+    right 10px
+    bottom 70px
+    width 150px
+    height 50px
+    font-size 0.8rem
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    color #27ff00
+    margin-right 10px
+
+    &-item
+        width 90px
+        height 20px
+        text-align right
+        font-size 0.8rem
+

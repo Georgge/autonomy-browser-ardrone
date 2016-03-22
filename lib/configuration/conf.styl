@@ -1,0 +1,85 @@
+.conf
+    width 25vw
+    position absolute
+    height 100vh
+    background $element-darkColor
+    top 0
+    left 100vw
+    right 0
+    transition left 1s, right 1s
+    display flex
+    justify-content center
+    align-items center
+    flex-wrap wrap
+    &-button
+        position absolute
+        width 60px
+        height 60px
+        background rgba(#fff, 0.8)
+        left -60px
+        top 300px
+        border-top solid 2px #fff
+        border-bottom solid 2px #fff
+        border-left solid 2px #fff
+        border-radius 5px 0px 0px 5px
+        box-sizing border-box
+        margin-top 5px
+        display flex
+        justify-content center
+        align-items center
+        box-shadow -3px 2px 10px #a9a9a9
+        cursor pointer
+
+.conf-item
+    width 95%
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    color $letter-blueColor
+    > input
+        text-align right
+        height 12px
+        font-size 0.8rem
+        border-radius 3px
+        color #62ddb2
+
+
+.general-conf
+    width 90%
+    border solid 1.5px #000
+    box-shadow -1px 2px 10px #191919
+    height 500px
+    position relative
+    display flex
+    justify-content center
+    flex-wrap wrap
+    align-items center
+    font-size 0.8rem
+    &::before
+        content "Configuracion general"
+        position absolute
+        top -13px
+        left 10px
+        font-weight normal
+        color $letter-whiteColor
+
+.close-conf
+    position absolute
+    width 20px
+    height 20px
+    border-radius 50%
+    top 10px
+    right 10px
+    display flex
+    justify-content center
+    box-shadow 1px 1px 10px #000
+    cursor pointer
+    &::after
+        content "x"
+        font-size 1rem
+        color $letter-whiteColor
+        display flex
+        justify-content center
+        align-items center
+        margin-top -1px
+        margin-left -1px

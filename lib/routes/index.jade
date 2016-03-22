@@ -1,0 +1,48 @@
+div(id="route", class="route")
+    div(id="open-route", class="route-button")
+        img(src="image/route.png", alt="crear ruta", width="45", height="45")
+    div(class="return", id="return-route")
+            | >>
+
+    div(id="map", class="map")
+    div(class="map-button")
+        div(id="takeoffMap", class="map-button-item takeoff")
+            img(src="image/takeoff.png", alt="Despegar")
+        div(id="landMap", class="map-button-item land")
+            img(src="image/land.png", alt="Despegar")
+        div(id="go", class="map-button-item fly")
+            img(src="image/fly.png", alt="Despegar")
+        div(id="stopMap", class="map-button-item stop")
+            img(src="image/stop.png", alt="Despegar")
+        div(id="clear", class="map-button-item purple")
+            img(src="image/clear.png", alt="Limpiar")
+        div(id="reset", class="map-button-item turk")
+            img(src="image/reset.png", alt="Limpiar")
+
+    div(id="map-panel", class="map-panel")
+        div(class="map-panel-title")
+            | Control de vuelo por ruta
+
+        div(class="manual-position")
+            div Latitud:
+                input(id="goLat")
+            div Longitud:
+                input(id="goLon")
+
+            span(id="goPointMap", class="medium-button")
+
+        div(class="options-flyRoute")
+            div Altura:
+                input(id="altitudeMap")
+
+        div(class="time-flyRoute")
+            div Iniciar en:
+                input(id="fly-hour", placeholder="Horas", value="0", type="number")
+            div Con:
+                input(id="fly-minutes", placeholder="Minutos", value="0", type="number")
+            div
+                span(id="go-start", class="medium-button") Aplicar
+
+
+
+

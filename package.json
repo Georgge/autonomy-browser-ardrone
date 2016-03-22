@@ -1,0 +1,47 @@
+{
+  "name": "DroneAutonomy",
+  "version": "0.0.1",
+  "description": "Prueba de sockets con Socket.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jorge",
+  "license": "MIT",
+  "dependencies": {
+    "ar-drone": "~0.3.3",
+    "ar-drone-png-stream": "~2.0.0",
+    "ardrone-autonomy": "~0.1.2",
+    "data-uri-to-buffer": "0.0.3",
+    "dronestream": "~1.1.1",
+    "express": "~4.12.4",
+    "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "~2.0.1",
+    "fs": "0.0.2",
+    "gps": "~0.1.0",
+    "level": "^1.2.0",
+    "level-ttl": "^3.1.0",
+    "nano": "~6.1.4",
+    "node-vincenty": "0.0.6",
+    "socket.io": "~1.3.5",
+    "st": "~0.5.4",
+    "uuid": "^2.0.1",
+    "walk": "^2.3.9"
+  },
+  "devDependencies": {
+    "browserify": "~10.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Georgge/autonomy-browser-ardrone"
+  },
+  "keywords": [
+    "ar-drone",
+    "parrot",
+    "autonomy"
+  ],
+  "bugs": {
+    "url": "https://github.com/Georgge/autonomy-browser-ardrone/issues"
+  }
+}

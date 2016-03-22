@@ -1,0 +1,50 @@
+.control-help-panel
+    width 380px
+    height 100vh
+    background $element-darkColor
+    position absolute
+    top 0
+    left -385px
+    z-index 110
+    box-shadow 1px 2px 10px #000
+    display flex
+    justify-content center
+    align-content flex-start
+    flex-wrap wrap
+    transition left 1s
+
+.table-controls
+    margin-top 100px
+    width 90%
+    border solid 1px #6f6f6f
+    color $letter-whiteColor
+    &:first-child
+        > td
+            font-weight bold
+            font-size 0.9rem
+
+.td
+    border solid 1px #6f6f6f
+    text-align center
+    font-size 0.8rem
+
+.close-help
+    position absolute
+    width 20px
+    height 20px
+    border-radius 50%
+    top 10px
+    right 10px
+    display flex
+    justify-content center
+    box-shadow 1px 1px 10px #000
+    cursor pointer
+    &::after
+        content "x"
+        font-size 1rem
+        color $letter-whiteColor
+        display flex
+        justify-content center
+        align-items center
+        margin-top -1px
+        margin-left -1px
